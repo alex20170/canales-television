@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4995152189601827"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver canales TDT en directo gratis </title>
+    <meta name="description"
+        content="Mira La 1, Antena 3, Telecinco y más canales TDT en directo gratis desde España en CanalesTV.es. Plataforma segura y fácil para ver TV online.">
+    <meta name="referrer" content="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg: #05070a;
+            --surface: #0b111a;
+            --primary: #10b981;
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+            --radius: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        nav {
+            background: rgba(5, 7, 10, 0.92);
+            backdrop-filter: blur(24px);
+            padding: 1.2rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 5%;
+        }
+
+        .ad-slot {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+            width: 100%;
+            min-height: 90px;
+            margin: 2rem 0;
+            border-radius: 18px;
+            display: grid;
+            place-items: center;
+            color: var(--text-dim);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-main {
+            text-align: center;
+            margin: 3rem 0 5rem;
+        }
+
+        .header-main h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+        }
+
+        .header-main p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .categories {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .cat-btn {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-dim);
+            padding: 0.8rem 1.8rem;
+            border-radius: 100px;
+            cursor: pointer;
+            font-weight: 800;
+            transition: 0.3s ease, transform 0.3s ease;
+            min-width: 140px;
+        }
+
+        .cat-btn:hover {
+            transform: translateY(-1px);
+            border-color: rgba(16, 185, 129, 0.8);
+        }
+
+        .cat-btn.active {
+            background: var(--primary);
+            color: #000;
+            border-color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
+            padding: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 28px 54px rgba(0, 0, 0, 0.22);
+        }
+
+        .logo-box {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 20px;
+            margin: 0 auto 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem;
+        }
+
+        .logo-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .btn-play {
+            background: var(--primary);
+            color: #000;
+            padding: 0.9rem 1rem;
+            border-radius: 15px;
+            font-weight: 900;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-play:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 24px rgba(16, 185, 129, 0.25);
+        }
+
+        .seo-section {
+            margin-top: 6rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 4rem;
+        }
+
+        .seo-section h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .seo-section p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background: #030508;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 5rem 5% 3rem;
+            margin-top: 6rem;
+            text-align: center;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            text-align: left;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        @media (min-width: 900px) {
+            .grid { grid-template-columns: repeat(2, minmax(280px, 1fr)); }
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                align-items: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .header-main h1 {
+                font-size: 2.7rem;
+            }
+
+            .header-main p {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+
+            .categories {
+                gap: 0.6rem;
+                padding: 0 0.5rem;
+            }
+
+            .cat-btn {
+                padding: 0.75rem 1.2rem;
+                min-width: 120px;
+            }
+
+            .grid { grid-template-columns: repeat(2, minmax(140px, 1fr)); gap: 1rem; }
+
+            .card {
+                padding: 1.6rem;
+            }
+
+            .logo-box {
+                width: 90px;
+                height: 90px;
+            }
+
+            .seo-section {
+                padding-top: 3rem;
+            }
+
+            footer {
+                padding: 3rem 2rem 2rem;
+            }
+
+            .footer-grid {
+                gap: 1.8rem;
+            }
+
+            .footer-bottom {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div style="font-weight:900; font-size:1.6rem; color:var(--primary);">Canales TV</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#canales">Canales</a></li>
+            <li><a href="#info">Información</a></li>
+            <li><a href="mailto:tuemail@gmail.com">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="ad-slot">ESPACIO PARA ANUNCIOS - Aquí irán tus anuncios</div>
+
+        <header class="header-main">
+            <h1>Ver canales TDT en directo gratis</h1>
+            <p>Encuentra y reproduce canales TDT con un solo clic: una experiencia clara, rápida y accesible desde cualquier
+                dispositivo para ver TV online gratis y legal.</p>
+        </header>
+
+        <div class="categories">
+            <button class="cat-btn active" onclick="setGroup('Nacional')">Nacionales</button>
+            <button class="cat-btn" onclick="setGroup('Regional')">Autonómicos</button>
+            <button class="cat-btn" onclick="setGroup('Cine')">Cine y Series</button>
+            <button class="cat-btn" onclick="setGroup('Deportes')">Deportes</button>
+            <button class="cat-btn" onclick="setGroup('Infantil')">Infantiles</button>
+        </div>
+
+        <div id="grid" class="grid"></div>
+
+        <div class="ad-slot">Espacio Publicitario - AdSense In-Feed</div>
+
+        <section id="info" class="seo-section">
+            <h2>Ver TDT Online Gratis y Legal</h2>
+            <p>Nuestra plataforma está diseñada para facilitar el acceso a los canales de televisión españoles que
+                emiten en abierto (TDT) de manera totalmente <strong>legal y segura</strong>. Al utilizar enlaces
+                oficiales de las cadenas, garantizamos que la experiencia del usuario sea de la máxima calidad, con
+                señal en alta definición y sin los riesgos asociados a plataformas piratas.</p>
+            <p>¿Buscas ver La 1 en directo, seguir las noticias en Antena 3 o disfrutar de los mejores programas de
+                Telecinco? Estás en el lugar indicado. Además, ofrecemos una amplia cobertura de canales regionales como
+                Telemadrid, Canal Sur o TV3, permitiéndote estar conectado con tu comunidad autónoma desde cualquier
+                parte del mundo.</p>
+            <h3>Ventajas de nuestra plataforma</h3>
+            <p>A diferencia de otras webs, nosotros priorizamos la <strong>estabilidad y la sencillez</strong>. No
+                necesitas instalar aplicaciones pesadas ni realizar registros complicados. Solo tienes que seleccionar
+                tu canal favorito y empezar a disfrutar de la mejor programación de Espana al instante.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#canales">Todos los Canales</a></li>
+                    <li><a href="#info">Sobre nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="cookies.html">Política de Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:tuemail@gmail.com?subject=Soporte%20T%C3%A9cnico">Soporte Técnico</a></li>
+                    <li><a href="mailto:tuemail@gmail.com?subject=Publicidad">Publicidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Alejandro Sibaja. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================================
+        // LOGOS: Si quieres cambiar un logo, simplemente sustituye
+        // la URL del campo  l: 'URL_AQUI'  por la que quieras
+        // ============================================================
+        const channels = [
+
+            // ── NACIONALES ──────────────────────────────────────────
+            {
+                n: 'La 1',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/La_1.svg/512px-La_1.svg.png',
+                u: 'https://www.rtve.es/directo/la-1/'
+            },
+            {
+                n: 'La 2',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/La_2_2021.svg/512px-La_2_2021.svg.png',
+                u: 'https://www.rtve.es/directo/la-2/'
+            },
+            {
+                n: 'Antena 3',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Antena_3_2022.svg/512px-Antena_3_2022.svg.png',
+                u: 'https://www.atresplayer.com/directos/antena3/'
+            },
+            {
+                n: 'Telecinco',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Telecinco_2024_logo.svg/512px-Telecinco_2024_logo.svg.png',
+                u: 'https://www.mitele.es/directo/telecinco/'
+            },
+            {
+                n: 'laSexta',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/LaSexta_2022.svg/512px-LaSexta_2022.svg.png',
+                u: 'https://www.atresplayer.com/directos/lasexta/'
+            },
+            {
+                n: 'Cuatro',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Cuatro_2024_logo.svg/512px-Cuatro_2024_logo.svg.png',
+                u: 'https://www.mitele.es/directo/cuatro/'
+            },
+            {
+                n: 'Neox',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Neox_2022.svg/512px-Neox_2022.svg.png',
+                u: 'https://www.atresplayer.com/directos/neox/'
+            },
+            {
+                n: 'Nova',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Nova_logo_2022.svg/512px-Nova_logo_2022.svg.png',
+                u: 'https://www.atresplayer.com/directos/nova/'
+            },
+            {
+                n: 'Mega',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Mega_2022.svg/512px-Mega_2022.svg.png',
+                u: 'https://www.atresplayer.com/directos/mega/'
+            },
+            {
+                n: 'Energy',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Energy_2022.svg/512px-Energy_2022.svg.png',
+                u: 'https://www.mitele.es/directo/energy/'
+            },
+            {
+                n: 'Divinity',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Divinity_2022.svg/512px-Divinity_2022.svg.png',
+                u: 'https://www.mitele.es/directo/divinity/'
+            },
+            {
+                n: 'Be Mad',
+                g: 'Nacional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Be_Mad_2022.svg/512px-Be_Mad_2022.svg.png',
+                u: 'https://www.mitele.es/directo/be-mad/'
+            },
+
+            // ── REGIONALES ──────────────────────────────────────────
+            {
+                n: 'Telemadrid',
+                g: 'Regional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Telemadrid_logo_2017.svg/512px-Telemadrid_logo_2017.svg.png',
+                u: 'https://www.telemadrid.es/emision-en-directo/'
+            },
+            {
+                n: 'Canal Sur',
+                g: 'Regional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Canal_Sur_logo_2017.svg/512px-Canal_Sur_logo_2017.svg.png',
+                u: 'https://www.canalsur.es/directo-1193.html'
+            },
+            {
+                n: 'TV3',
+                g: 'Regional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/TV3CAT_logo.svg/512px-TV3CAT_logo.svg.png',
+                u: 'https://www.ccma.cat/tv3/directe/tv3/'
+            },
+            {
+                n: 'TVG',
+                g: 'Regional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Logo_TVG_2021.svg/512px-Logo_TVG_2021.svg.png',
+                u: 'https://www.crtvg.es/tvg/programacion/directo'
+            },
+            {
+                n: 'ETB 1',
+                g: 'Regional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/ETB1_logo_2020.svg/512px-ETB1_logo_2020.svg.png',
+                u: 'https://www.eitb.eus/eu/telebista/zuzenean/etb1/'
+            },
+            {
+                n: 'Aragón TV',
+                g: 'Regional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Aragon_TV_logo.svg/512px-Aragon_TV_logo.svg.png',
+                u: 'https://www.cartv.es/aragontv/directo'
+            },
+            {
+                n: 'IB3',
+                g: 'Regional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/IB3_Televisi%C3%B3_logo.svg/512px-IB3_Televisi%C3%B3_logo.svg.png',
+                u: 'https://ib3.org/directe'
+            },
+            {
+                n: 'À Punt',
+                g: 'Regional',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/A_Punt_logo.svg/512px-A_Punt_logo.svg.png',
+                u: 'https://www.apuntmedia.es/en-directe'
+            },
+
+            // ── DEPORTES ────────────────────────────────────────────
+            {
+                n: 'Teledeporte',
+                g: 'Deportes',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Teledeporte.svg/512px-Teledeporte.svg.png',
+                u: 'https://www.rtve.es/directo/teledeporte/'
+            },
+            {
+                n: 'GOL',
+                g: 'Deportes',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Gol_Play_logo.svg/512px-Gol_Play_logo.svg.png',
+                u: 'https://goltelevision.com/en-directo'
+            },
+
+            // ── CINE Y SERIES ────────────────────────────────────────
+            {
+                n: 'FDF',
+                g: 'Cine',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/FDF_2024.svg/512px-FDF_2024.svg.png',
+                u: 'https://www.mitele.es/directo/fdf/'
+            },
+            {
+                n: 'Trece',
+                g: 'Cine',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Trece_logo_2020.svg/512px-Trece_logo_2020.svg.png',
+                u: 'https://www.trece.tv/directo/'
+            },
+            {
+                n: 'Ten',
+                g: 'Cine',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ten_TV_logo_2020.svg/512px-Ten_TV_logo_2020.svg.png',
+                u: 'https://www.tentv.es/directo/'
+            },
+
+            // ── INFANTILES ───────────────────────────────────────────
+            {
+                n: 'Boing',
+                g: 'Infantil',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Boing_logo_2016.svg/512px-Boing_logo_2016.svg.png',
+                u: 'https://www.mitele.es/directo/boing/'
+            },
+            {
+                n: 'Clan',
+                g: 'Infantil',
+                l: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Clan_TVE_logo_2021.svg/512px-Clan_TVE_logo_2021.svg.png',
+                u: 'https://www.rtve.es/directo/clan/'
+            }
+        ];
+
+        let curGroup = 'Nacional';
+
+        function render() {
+            const grid = document.getElementById('grid');
+            grid.innerHTML = '';
+            channels.filter(c => c.g === curGroup).forEach(c => {
+                grid.innerHTML += `
+                    <div class="card" onclick="window.open('${c.u}', '_blank')">
+                        <div class="logo-box">
+                            <img 
+                                src="${c.l}" 
+                                alt="${c.n} en directo"
+                                onerror="this.src='https://placehold.co/100x100/0b111a/10b981?text=${encodeURIComponent(c.n)}'"
+                            >
+                        </div>
+                        <h3>${c.n}</h3>
+                        <a class="btn-play"><i data-lucide="external-link"></i> VER AHORA</a>
+                    </div>
+                `;
+            });
+            lucide.createIcons();
+        }
+
+        function setGroup(g) {
+            curGroup = g;
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('active', b.innerText.includes(g)));
+            render();
+        }
+
+        render();
+    </script>
+</body>
+
+</html>
