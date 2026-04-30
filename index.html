@@ -6,13 +6,30 @@
     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver canales TDT en directo gratis </title>
-    <meta name="description"
-        content="Mira La 1, Antena 3, Telecinco y más canales TDT en directo gratis desde España en CanalesTV.es. Plataforma segura y fácil para ver TV online.">
+    <title>Ver canales TDT en directo gratis | CanalesTV.es</title>
+    <meta name="description" content="Mira La 1, Antena 3, Telecinco y más canales TDT en directo gratis desde España en CanalesTV.es. Plataforma segura y fácil para ver TV online.">
     <meta name="referrer" content="no-referrer">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="canonical" href="https://canalestv.es/">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ver canales TDT en directo gratis | CanalesTV.es">
+    <meta property="og:description" content="Mira La 1, Antena 3, Telecinco y más canales TDT en directo gratis desde España. Plataforma segura y fácil.">
+    <meta property="og:url" content="https://canalestv.es/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CanalesTV.es",
+      "url": "https://canalestv.es/",
+      "description": "Ver canales TDT en directo gratis desde España",
+      "inLanguage": "es-ES"
+    }
+    </script>
     <style>
         :root {
             --bg: #05070a;
@@ -339,6 +356,49 @@
                 font-size: 0.75rem;
             }
         }
+        /* ── COOKIE BANNER ── */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #0b111a;
+            border-top: 1px solid rgba(16,185,129,0.35);
+            padding: 1.2rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            z-index: 9999;
+            box-shadow: 0 -8px 32px rgba(0,0,0,0.4);
+            animation: slideUp 0.5s ease;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity:0; }
+            to   { transform: translateY(0);    opacity:1; }
+        }
+        #cookie-banner p {
+            font-size: 0.88rem;
+            color: var(--text-dim);
+            flex: 1;
+            min-width: 240px;
+        }
+        #cookie-banner a { color: var(--primary); text-decoration: none; }
+        .cookie-btns { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+        .btn-cookie {
+            padding: 0.65rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-cookie:hover { transform: translateY(-2px); }
+        .btn-accept { background: var(--primary); color: #000; }
+        .btn-reject { background: rgba(255,255,255,0.08); color: var(--text); }
+        .btn-config  { background: transparent; color: var(--text-dim); border: 1px solid rgba(255,255,255,0.15); }
     </style>
 </head>
 
@@ -350,9 +410,19 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="#canales">Canales</a></li>
             <li><a href="#info">Información</a></li>
-            <li><a href="mailto:tuemail@gmail.com">Contacto</a></li>
+            <li><a href="mailto:info@canalestv.es">Contacto</a></li>
         </ul>
     </nav>
+
+    <!-- ══ COOKIE BANNER ══ -->
+    <div id="cookie-banner" style="display:none;">
+        <p>🍪 Usamos cookies propias y de terceros (Google AdSense, Analytics) para mejorar tu experiencia y mostrarte publicidad personalizada. Consulta nuestra <a href="cookies.html">Política de Cookies</a> y <a href="politica-privacidad.html">Política de Privacidad</a>.</p>
+        <div class="cookie-btns">
+            <button class="btn-cookie btn-accept" onclick="cookieConsent('accept')">✓ Aceptar todo</button>
+            <button class="btn-cookie btn-reject" onclick="cookieConsent('reject')">✗ Solo necesarias</button>
+            <button class="btn-cookie btn-config" onclick="window.location='cookies.html'">⚙ Configurar</button>
+        </div>
+    </div>
 
     <div class="container">
         <div class="ad-slot">ESPACIO PARA ANUNCIOS - Aquí irán tus anuncios</div>
@@ -413,8 +483,8 @@
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul>
-                    <li><a href="mailto:tuemail@gmail.com?subject=Soporte%20T%C3%A9cnico">Soporte Técnico</a></li>
-                    <li><a href="mailto:tuemail@gmail.com?subject=Publicidad">Publicidad</a></li>
+                    <li><a href="mailto:info@canalestv.es?subject=Soporte%20T%C3%A9cnico">Soporte Técnico</a></li>
+                    <li><a href="mailto:info@canalestv.es?subject=Publicidad">Publicidad</a></li>
                 </ul>
             </div>
         </div>
@@ -423,6 +493,22 @@
         </div>
     </footer>
 
+    <script>
+        // ── COOKIE CONSENT ──────────────────────────────────────
+        function cookieConsent(choice) {
+            localStorage.setItem('cookie_consent', choice);
+            document.getElementById('cookie-banner').style.display = 'none';
+            if (choice === 'accept') {
+                // Activar AdSense
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookie_consent')) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+        });
+    </script>
     <script>
         // ============================================================
         // LOGOS: Si quieres cambiar un logo, simplemente sustituye
