@@ -1,5 +1,33 @@
-User-agent: *
+# Bloque específico para Google AdSense
+User-agent: Mediapartners-Google
 Allow: /
 
-# Sitemap
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# Bloque para robots de IA (bloqueados)
+User-agent: Amazonbot
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: ClaudeBot
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: meta-externalagent
+Disallow: /
+
+# Instrucciones generales para el resto de buscadores
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /templates/
+Disallow: /scripts/
+
+# Señal de contenidos (extensión no estándar pero válida)
+Content-Signal: search=yes,ai-train=no
+
+# Enlace al Sitemap
 Sitemap: https://canalestv.es/sitemap.xml
