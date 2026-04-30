@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Páginas indexables
+Allow: /index.html
+Allow: /aviso-legal.html
+Allow: /politica-privacidad.html
+Allow: /cookies.html
+
+# Bloquear archivos que no deben indexarse
+Disallow: /channels.json
+Disallow: /channels_list.txt
+Disallow: /ads.txt
+
+# Sitemap
+Sitemap: https://canalestv.es/sitemap.xml
